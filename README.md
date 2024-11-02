@@ -3,7 +3,7 @@ Plants are essential for human survival and have been used for centuries to trea
 
 
 # How to use
-Step 1 - Run the app.py file
-Step 2 - open the link generated in the terminal
-Step 3 - upload a picture of the plant [ Oleander, Azadiractha Indica, Ficus Religiosa-Raavi, Calotropis]
-Step 4 - 
+Step 1 - Run the app.py file. <br>
+Step 2 - open the link generated in the terminal.<br>
+Step 3 - upload a picture of the plant [ Oleander, Azadiractha Indica, Ficus Religiosa-Raavi, Calotropis].<br>
+Step 4 - click on "Predict" button.<br>
