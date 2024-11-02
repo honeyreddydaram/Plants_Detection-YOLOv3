@@ -1,0 +1,138 @@
+body, h1, h2, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.main-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.plant-card1{
+    background-color: #65c00b84;
+    border: 1px solid #ddd;
+    padding: 1px;
+    margin: 20px;
+    border-radius: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    display: flex;
+}
+.plant-card1 img{
+    width: 30%;
+    margin-right: 20px;
+    border-radius: 30px;
+
+}
+
+.cards{
+    display: flex;
+}
+
+.plant-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width:500px;
+    height: 500px;
+    
+}
+
+.plant-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.uses-section {
+  background-color: #FFD700;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.uses-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 16px;
+}
+
+.sources-section {
+  background-color: #87CEEB;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.sources-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 16px;
+}
+
+.more-plants-section {
+  background-color: #98Fb98;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+
+}
+
+.more-plants-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 16px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}

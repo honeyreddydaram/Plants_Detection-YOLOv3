@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='web.css') }}">
+    <title>Herbal History Detection</title>
+</head>
+<body>
+    <header>
+        <h1>Herbo Scan</h1>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#more-plants">More Plants</a>
+        <a href="#uses">Uses</a>
+        <a href="#sources">Sources</a>
+     </div>   
+    </header>
+    
+    <section class="main-content">
+        <h2>MAGICAL MEDICINAL PLANTS!</h2>
+        <p>Discover the healing properties of various plants and herbs.</p>
+        <div>
+            <form id="upload-file" method="post" enctype="multipart/form-data" action="{{url_for('upload')}}">
+                <label for="imageUpload" class="upload-label" style="color: #33ff00; font-weight: bold;">
+                    Choose Image...
+                </label>
+                <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+                <button type="submit" class="btn btn-primary btn-lg" id="btn-predict" style="background-color: rgb(166, 255, 0); color: black; font-weight: bold;">Predict!</button>
+                <input type="reset">
+                {% if filename %}
+                <div>
+                    <br><br>
+                    <img src="{{ url_for('static', filename='upload/' + filename) }}" alt="Uploaded Image" style="width: 250px; height: auto;">
+                </div>
+                {% endif %} 
+                <br><br><h3>{{ prediction_text }}<h3>
+                <p>{{ details }}<p>
+            </form>
+        </div>       
+        <section class="cards">
+            <div class="plant-card">
+                <img src="/static/images/plant1.jpg" alt="Plant 1">
+                <h3>Lavender</h3>
+                <p>Lavender is a powerful medicinal plant known for its calming scent and healing abilities. Its soothing aroma helps reduce stress and anxiety, and its oil can heal minor cuts and bites. People even use it in cooking to add a special flavor to their food. So, lavender is not only beautiful but also brings relaxation and health benefits to our lives.</p>
+            </div>
+            
+            <div class="plant-card">
+                <img src="/static/images/plant2.jpg" alt="Plant 2">
+                <h3>Aloe vera</h3>
+                <p>Aloe vera is a helpful plant with thick, spiky leaves that are full of gooey gel. This gel is like magic for our skin – it can soothe sunburns, cuts, and itchy spots. Aloe vera also grows in our homes as a handy houseplant. Just a little bit of its gel can make us feel better when our skin needs some love.</p>
+            </div>
+            
+            <div class="plant-card">
+                <img src="/static/images/plant3.jpg" alt="Plant 3">
+                <h3>Turmeric</h3>
+                <p>Turmeric is a special plant with a bright yellow root that helps keep us healthy. People have used it for a long time as a natural medicine. It can make our joints feel better and help us when we have a cold. Turmeric adds a nice flavor to food too, making it tasty and good for us at the same time.</p>
+            </div>
+
+            <div class="plant-card">
+                    <img src="/static/images/plant4.jpg" alt="Plant 4">
+                    <h3>Holy Basil</h3>
+                    <p>Holy basil, also known as tulsi, is a special plant that people use like a natural medicine. Its leaves smell good and taste a little spicy. People believe it can help when we're sick, soothe our tummy, and make us feel less stressed. Some even think it keeps bugs away! Making tea with its leaves can make us feel better, and having a holy basil plant at home is like having a friendly health helper.</p>
+            </div>
+
+            <div class="plant-card">
+                        <img src="/static/images/plant5.jpg" alt="Plant 5">
+                        <h3>Ginger</h3>
+                        <p>Ginger is a special plant with a flavorful root that people use to help their tummies feel good. It can stop us from feeling sick and make our digestion easier. If our muscles hurt, ginger can help them feel better too. Adding ginger to our food or making ginger tea is like giving our body a friendly hug when it needs it.</p>
+            </div>
+        </section>
+    </section>
+    
+    <section class="more-plants-section" id="more-plants">
+        <h2>More Medicinal Plants</h2>
+    <ul class="more-plants-list">
+        <li><a href="https://en.wikipedia.org/wiki/Echinacea">Echinacea</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Ginseng">Ginseng</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Chamomile">Chamomile</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Peppermint">Peppermint</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Garlic">Garlic</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Lemon_balm">Lemon Balm</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Valerian_(herb)">Valerian</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Ginkgo_biloba">Ginkgo Biloba</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Hypericum_perforatum">St. John's Wort</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Cinnamon">Cinnamon</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Mint">Mint</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Rosemary">Rosemary</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Thyme">Thyme</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Calendula">Calendula</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Dandelion">Dandelion</a></li>
+    </ul>
+    </section>
+
+    <section class="uses-section" id="uses">
+        <h2>Overall Uses of Medicinal Plants</h2>
+        <ul class="uses-list">
+            <li>Relief from stress and anxiety</li>
+            <li>Soothing sunburns and skin irritations</li>
+            <li>Boosting digestion and easing stomach discomfort</li>
+            <li>Reducing inflammation and pain</li>
+            <li>Enhancing respiratory health</li>
+            <li>Supporting immune system function</li>
+            <li>Promoting relaxation and better sleep</li>
+            <li>Providing natural antioxidants</li>
+            <li>Managing blood sugar levels</li>
+            <li>Improving cognitive function</li>
+            <li>Alleviating headaches and migraines</li>
+            <li>Supporting cardiovascular health</li>
+            <li>Assisting in wound healing</li>
+            <li>Enhancing mood and emotional well-being</li>
+            <li>Detoxifying the body</li>
+            <li>Strengthening bones and joints</li>
+            <li>Improving skin health and complexion</li>
+            <li>Calming digestive disorders</li>
+            <li>Assisting with weight management</li>
+            <li>Reducing menstrual discomfort</li>
+                </ul>
+    </section>
+
+    <section class="sources-section" id="sources">
+        <h2>Sources for Medicinal Plants</h2>
+        <ul class="sources-list">
+            <li>Local nurseries and garden centers: Find a variety of medicinal plants for sale.</li>
+            <li>Online plant retailers: Purchase medicinal plants from reputable online sellers.</li>
+            <li>Farmers' markets: Some vendors offer a selection of locally grown medicinal herbs.</li>
+            <li>Community gardens: Join or visit community gardens that cultivate medicinal plants.</li>
+            <li>Wildcrafting: Ethically gather wild medicinal herbs from nature, following regulations.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; Herbal History Detection</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 4
+names: ['Azadiractha Indica', 'Calotropis', 'Ficus Religiosa-Raavi-', 'Oleander']
+
+roboflow:
+  workspace: pkm-cj9yb
+  project: plant-detection-iqmnt
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/pkm-cj9yb/plant-detection-iqmnt/dataset/1
